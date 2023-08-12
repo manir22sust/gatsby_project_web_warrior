@@ -19,11 +19,7 @@ export default function Home({ data }) {
           </Link>
         </div>
 
-        <GatsbyImage
-          image={image}
-          alt="please include an alt"
-          style={{ width: "100%", height: "50%" }}
-        />
+        <GatsbyImage image={image} alt="please include an alt" />
       </section>
     </Layout>
   );
@@ -33,7 +29,7 @@ export const query = graphql`
   query Banner {
     file(relativePath: { eq: "banner.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FIXED)
+        gatsbyImageData(layout: FIXED, width: 500, height: 400)
       }
     }
   }
