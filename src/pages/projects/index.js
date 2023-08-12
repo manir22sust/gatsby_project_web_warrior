@@ -23,7 +23,6 @@ export default function Projects({ data }) {
                     project.frontmatter.thumb.childImageSharp.gatsbyImageData
                   }
                   alt="please include an alt"
-                  style={{ marginLeft: "60px" }}
                 />
                 <h3> {project.frontmatter.title} </h3>
                 <p> {project.frontmatter.stack} </p>
@@ -49,7 +48,7 @@ export const query = graphql`
           slug
           thumb {
             childImageSharp {
-              gatsbyImageData(layout: FIXED, width: 220)
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
